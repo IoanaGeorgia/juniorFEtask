@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   letter-spacing: 0.5px;
+  font-family: "Museo Sans Cyrl";
 }
 :root {
   --grey: #333333;
@@ -16,19 +17,18 @@
 button {
   cursor: pointer;
 }
-/* ADD MONTSERRAT, TO DEFAULT TEXT CLASS TOO, placeholder la form */
 @font-face {
   font-family: "Museo Sans Cyrl";
   src: url(MuseoSansCyrl-500.otf);
 }
 header {
   height: 5rem;
-  width: 90rem;
-  margin: 0px 3rem;
+  padding: 0px 8.33%;
   font-family: var(--defaultFont);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 header div {
   width: max-content;
@@ -39,6 +39,7 @@ header div {
   text-transform: uppercase;
   font-weight: 700;
   margin-right: 3rem;
+  color: var(--grey);
 }
 .headerButtons {
   min-width: 5rem;
@@ -47,28 +48,37 @@ header div {
   background-color: transparent;
   border: none;
   line-height: 1rem;
-  margin: 0px 2rem;
+  margin: 0px 1vw;
 }
 .headerSignInArea {
   margin-left: auto;
 }
+
 .headerSignInArea button:nth-of-type(1) {
   border-radius: 3rem;
   border: 1px solid #000;
   width: 5rem;
   height: 2.5rem;
   margin-right: 1rem;
+  padding: 0px 1rem;
   background-color: transparent;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
+
 .highlightButton {
   background-color: var(--highlightPurple);
   border-radius: 3.75rem;
   height: 2.5rem;
-  width: 10rem;
+  width: 13rem;
   color: white;
   text-transform: uppercase;
   border: none;
   transition: background-color 200ms ease-in;
+}
+.contactArea .highlightButton {
+  width: 40%;
 }
 .highlightButton:hover {
   background-color: var(--hoverHighlightPurple);
@@ -84,8 +94,9 @@ header div {
 .mainLanding {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
+  padding: 0px 8.33%;
 }
 .mainLanding::before {
   content: "";
@@ -99,9 +110,9 @@ header div {
   opacity: 0.1;
 }
 .mainLandingText {
-  margin: 8rem 7rem;
-  width: 40%;
-  margin-right: 0rem;
+  margin: 8rem 0rem;
+  margin-right: 4rem;
+  width: 50%;
 }
 
 .mainLandingText p:nth-of-type(2) {
@@ -116,17 +127,18 @@ header div {
   color: var(--lightGrey);
   font-size: 1.1rem;
   line-height: 1.68rem;
+  font-family: "Montserrat", sans-serif;
 }
 .mainLandingImage {
-  width: 45rem;
+  width: 45%;
 }
 .mainLandingImage img {
   display: block;
   margin: auto;
-  width: 60%;
+  /* width: 80%; */
 }
 .stepsDescription {
-  margin: 7.5rem 8.75rem;
+  margin: 7.5rem 8.33%;
   position: relative;
 }
 .subTitle {
@@ -138,7 +150,7 @@ header div {
   display: block;
   position: relative;
 }
-.stepsDescription > p:nth-of-type(1) span::before {
+.stepsDescription p:nth-of-type(1) span::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -152,7 +164,7 @@ header div {
 .stepWrapper {
   border: 2px solid var(--highlightPurple);
   padding: 2rem;
-  width: 26rem;
+  width: 30%;
   border-radius: 1.875rem;
   font-family: "Museo Sans Cyrl";
   background-color: white;
@@ -161,9 +173,9 @@ header div {
   margin-top: 3.75rem;
 }
 .stepWrapper:nth-of-type(2) {
-  margin-top: -2rem;
+  margin-top: -6%;
   position: absolute;
-  right: 2rem;
+  right: 3rem;
 }
 .stepWrapper:nth-of-type(3) {
   position: absolute;
@@ -185,26 +197,24 @@ header div {
 }
 
 .stepsDesign {
-  width: 75rem;
-  height: 100vh;
+  width: 100%;
   z-index: -1;
   position: absolute;
   box-sizing: border-box;
   padding-top: 16rem;
-  padding-left: 23rem;
+  padding-left: 20%;
 }
 .stepDesign:nth-of-type(1) {
-  width: 30rem;
-  height: 10rem;
-  /* background-color: green; */
+  width: max(70%, 40vw);
+  height: 13rem;
   border-radius: 1.875rem;
   border: 3px dashed var(--highlightPurple);
   border-left: none;
   border-bottom: none;
 }
 .stepDesign:nth-of-type(2) {
-  width: 30rem;
-  height: 10rem;
+  width: max(70%, 40vw);
+  height: 13rem;
   /* background-color: green; */
   border-radius: 1.875rem;
   border: 3px dashed var(--highlightPurple);
@@ -213,8 +223,8 @@ header div {
   border-top-right-radius: 0px;
 }
 .stepDesign:nth-of-type(3) {
-  width: 30rem;
-  height: 10rem;
+  width: max(70%, 40vw);
+  height: 13rem;
   /* background-color: green; */
   border-radius: 1.875rem;
   border: 3px dashed var(--highlightPurple);
@@ -225,8 +235,8 @@ header div {
 
 .reviewArea {
   margin-top: 40rem;
-  padding-left: 7.5rem;
-  padding-right: 6rem;
+  padding: 0px 8.33%;
+  /* padding-right: 6rem; */
   display: flex;
   justify-content: space-between;
 }
@@ -236,10 +246,10 @@ header div {
 .reviewAreaButtons {
   margin-top: 2rem;
 }
-.reviewArea span {
+.reviewArea p span span {
   position: relative;
 }
-.reviewArea span::before {
+.reviewArea p span span::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -263,6 +273,7 @@ header div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-weight: bold;
 }
 .reviewsProfile img {
   border-radius: 50%;
@@ -271,7 +282,8 @@ header div {
   margin-right: 1rem;
 }
 .reviewsProfile div p:last-of-type {
-  color: var(--lighterGrey);
+  color: var(--formGrey);
+  font-weight: normal;
 }
 .reviewContent {
   margin-left: 4rem;
@@ -280,13 +292,17 @@ header div {
 }
 .reviewText {
   margin: 1rem 0rem;
+  display: flex;
 }
 .reviewText > p {
   font-size: 1.5rem;
   font-family: "Museo Sans Cyrl";
+  color: var(--grey);
 }
 .reviewText svg {
   margin-left: -3rem;
+  width: 5rem;
+  padding-right: 0.5rem;
 }
 .reviewAreaCounter {
   color: var(--highlightPurple);
@@ -315,8 +331,7 @@ header div {
   margin-top: 1rem;
 }
 .FAQArea {
-  margin-left: 7.5rem;
-  margin-right: 12rem;
+  padding: 0px 8.33%;
   margin-top: 9rem;
 }
 .FAQArea span {
@@ -327,14 +342,14 @@ header div {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 50%;
+  width: 22%;
   height: 100%;
   background-color: var(--highlightPurple);
   z-index: -1;
   opacity: 0.1;
 }
 .FAQAreaQuestions {
-  margin-left: 8rem;
+  padding: 0px 8.33%;
   margin-top: 3.75rem;
 }
 .contactAreaSubtitle {
@@ -342,7 +357,7 @@ header div {
 }
 .contactArea {
   margin-top: 9rem;
-  padding: 7.5rem;
+  padding: 8.33%;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -370,6 +385,9 @@ header div {
 }
 .contactAreaInfo > div {
   margin-top: 1rem;
+}
+.contactAreaInfo > div p:nth-of-type(1) {
+  margin-bottom: 0.5rem;
 }
 .contactAreaForm {
   width: 45%;
@@ -409,12 +427,15 @@ header div {
 .contactArea form textarea:focus {
   border: 1px solid var(--lightGrey);
 }
-.contactArea form textarea::placeholder {
+.contactArea form textarea::placeholder,
+.contactArea form input::placeholder {
   font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
-.contactAreaForm form::placeholder {
-  color: var(--formGrey);
+.contactArea form textarea {
+  height: 5rem;
 }
+
 .contactAreaForm form div {
   margin: 1.5rem 0rem;
   width: 100%;
@@ -424,39 +445,48 @@ header div {
   margin-top: 2.5rem;
 }
 footer {
-  margin: 0rem 7.5rem;
+  padding: 0rem 8.33%;
 }
 .footerInfo {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
 }
 .footerInfo div {
   min-width: 10%;
 }
 
-.footerInfo > div:not(.footerLinks, .logo) {
-  width: 45%;
-}
 .footerInfo span div p:nth-of-type(2) {
   margin-top: 1rem;
 }
-.footerInfo span{
-    display: flex;
-    gap:2rem;
-
+.footerInfo span {
+  display: flex;
+  gap: 2rem;
+}
+.footerInfo span div {
+  width: 50%;
+}
+.footerInfo span div p.defaultText {
+  font-size: 1rem !important;
+}
+.footerInfoWrapper{
+  display: flex;
+}
+.footerSubtitle {
+  color: var(--grey);
 }
 .footerLinks {
   width: 10%;
   margin-left: 5rem;
   height: 70%;
+
 }
 .footerLinks button {
   display: block;
   margin-top: 1.5rem;
   background-color: transparent;
   border: none;
+  color: var(--grey);
 }
 .footerLinks button:nth-of-type(1) {
   margin-top: 0px;
@@ -466,6 +496,9 @@ footer {
   justify-content: space-between;
   margin-top: 3rem;
   padding-bottom: 4.5rem;
+}
+.footerBasic div:nth-of-type(2) {
+  margin-left: 3rem;
 }
 .footerBasic * {
   color: var(--formGrey);
@@ -485,50 +518,95 @@ footer {
   line-height: 1rem;
   display: none;
 }
-
-@media (max-width: 800px) {
-  header.logo,
-  .headerButtons,
-  .headerSignInArea button:nth-of-type(1) {
+@media (max-width: 419px) {
+  .headerSignInArea,
+  .stepsDesign,
+  .headerButtons {
     display: none;
   }
+
+  header {
+    padding: 0px 1.5rem;
+  }
   .mainLanding {
-    margin: 0px;
     flex-direction: column;
+    padding: 1.5rem;
+  }
+  .mainLandingText p:nth-of-type(1),
+  .contactAreaInfo p.subTitle,
+  .FAQArea p.subTitle,
+  .stepsDescription div p.subTitle,
+  .reviewArea div p.subTitle {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  .subTitleMediaSmall {
+    display: block;
+  }
+  .reviewArea p span span {
+    display: inline-block;
+  }
+  .reviewArea p span span::before {
+    display: none;
+  }
+  .subTitleMediaSmall {
+    position: relative;
+  }
+  .subTitleMediaSmall::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--highlightPurple);
+    z-index: -1;
+    opacity: 0.1;
   }
   .mainLandingText {
     width: 100%;
-    margin-left: 0px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  .mainLandingText * {
-    text-align: center;
+  .highlightButton {
+    height: 3.375rem;
+  }
+  .mainLanding .highlightButton {
+    width: 100%;
+  }
+  .mainLandingImage img {
+    width: 100%;
+  }
+  .mainLandingImage {
+    margin-top: 4rem;
+    width: 70%;
   }
   .stepsDescription {
-    margin: 2.5rem;
-    margin-top: 10%;
+    margin: 5rem 1rem;
+    margin-right: 7rem;
   }
+
   .stepWrapper {
-    min-width: 30%;
-    width: min-content;
-    max-height: 50%;
+    width: 100%;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    position: unset;
   }
   .stepWrapper:nth-of-type(even) {
-    right: 1rem;
+    margin-top: 1.5rem;
+    position: unset;
   }
-  .stepsDesign {
-    width: 100%;
-    padding-top: 40%;
-    padding-left: 10%;
+  .stepWrapper:nth-of-type(odd) {
+    position: relative;
+    margin-top: 1.5rem;
   }
   .reviewArea {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 2.5rem;
+    margin: 1.5rem;
     padding: 0px;
   }
   .reviewContent {
@@ -547,60 +625,226 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .reviewText p {
+  .reviewArea img {
+    margin: 1rem;
+  }
+  .reviewContent p {
     text-align: center;
   }
   .reviewText svg {
     margin-left: 0rem;
   }
   .FAQArea {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin: 0rem;
+    margin-top: 2rem;
   }
   .FAQAreaQuestions {
-    margin-left: 0px;
+    padding: 0px;
   }
-  .contactArea{
+
+  .contactArea {
     flex-direction: column;
+    padding: 3rem 1rem;
   }
-  .contactArea > div{
-    width:100%;
-    
+  .contactArea > div {
+    width: 100%;
   }
-  .contactAreaForm{
-    margin-top:3rem;
+  .contactAreaForm {
+    margin-top: 3rem;
   }
-    footer .logo{
+  .contactAreaForm form {
+    padding: 5rem 1rem;
+  }
+  footer .logo {
     display: block;
   }
-  footer div{
+  footer div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    width:100%;
+    align-items: center;
+    width: 100%;
     text-align: center;
-    margin:0px;
+    margin: 0px;
   }
   .footerInfo span {
-  width: 100%;
-  flex-direction: column;
-
-}
-.footerInfo span div{
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .footerInfoWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+  }
+  .footerInfoWrapper .footerSubtitle {
     text-align: left;
+    width: 100%;
+  }
+  .footerInfo span div {
+    text-align: left;
+    width: 100%;
+  }
+  .footerLinks {
+    align-items: flex-start;
+    margin-left: 0px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footerBasic {
+    gap: 2rem;
+  }
 }
-.footerLinks{
-    margin-left:-2rem;
+@media (max-width: 800px) and (min-width: 420px) {
+  header .logo,
+  .headerButtons,
+  .headerSignInArea button:nth-of-type(1) {
+    display: none;
+  }
+  header {
+    width: unset;
+  }
+  .mainLanding {
+    margin: 0px;
+    flex-direction: column;
+  }
+  .mainLandingText {
+    width: 100%;
+    margin: 2rem 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainLandingText p:nth-of-type(2) {
+    width: 80%;
+  }
+  .mainLandingText * {
+    text-align: center;
+  }
+  .mainLandingImage {
+    width: unset;
+  }
+  .stepsDescription {
+    margin: 2.5rem;
+    margin-top: 10%;
+  }
+  .stepWrapper {
+    min-width: 35%;
+    width: min-content;
+    max-height: 50%;
+  }
+  .stepWrapper:nth-of-type(even) {
+    right: 1rem;
+  }
+  .stepsDesign {
+    width: 100%;
+    padding-top: 40%;
+    padding-left: 10%;
+  }
+  .reviewArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding: 0px;
+  }
+  .reviewContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .reviewsProfile,
+  .reviewsProfile div,
+  .reviewText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .reviewsProfile div p {
+    margin: 0.1rem 0rem;
+  }
+  .reviewText p {
+    text-align: center;
+  }
+  .reviewText svg {
+    margin-left: 0rem;
+  }
+
+  .FAQArea {
+    padding: 0px 7%;
+  }
+  .FAQAreaQuestions {
+    padding: 0px;
+  }
+  .contactArea {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactAreaInfo p.subTitle {
+    text-align: center;
+  }
+  .contactArea > div {
+    width: 80%;
+  }
+  .contactAreaForm {
+    margin-top: 3rem;
+  }
+  .contactAreaForm form {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .contactAreaFrom form input {
+    height: 2.5rem;
+  }
+  footer .logo {
+    display: block;
+  }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
+  .footerInfo span {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .footerInfoWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+  }
+  .footerInfo span div {
+    text-align: left;
+    width: 100%;
+  }
+  .footerLinks {
     flex-direction: row;
-    width:130%;
-   justify-content: space-between;
-}
-.footerLinks button:nth-of-type(1){
-    margin-top:1.5rem;
-}
-.footerBasic{
-    gap:2rem;
+    margin-left: 0px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footerLinks button:nth-of-type(1) {
+    margin-top: 1.5rem;
+  }
+  .footerBasic {
+    gap: 2rem;
+  }
 }
 
+@media (max-width: 1200px) {
+  .headerButtons button {
+    display: none;
+  }
 }
