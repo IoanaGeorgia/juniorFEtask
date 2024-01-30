@@ -39,10 +39,10 @@ button {
   margin-right: 3rem;
   color: var(--grey);
 }
-.highlightButton:hover :not(.formDisabledButton) {
+button.highlightButton:not(.formDisabledButton):hover {
   background-color: var(--hoverHighlightPurple);
 }
-.highlightButton:active :not(.formDisabledButton) {
+ button.highlightButton:not(.formDisabledButton):active {
   background-color: var(--activeHighlightPurple);
 }
 .subTitle {
