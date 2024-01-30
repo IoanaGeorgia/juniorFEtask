@@ -301,7 +301,7 @@
                 <form onsubmit="event.preventDefault()" autocomplete="off">
                     <input id="contactInputName" placeholder="Name">
                     <div>
-                        <input onkeypress="validateForm(event)" id="contactInputEmail" placeholder="Email">
+                        <input onkeypress="validateForm(event)" onblur="focusOutMail()" id="contactInputEmail" placeholder="Email">
                         <p class="formErrorText">Incorrect email type</p>
                     </div>
                     <textarea id="contactInputMessage" placeholder="Message"></textarea>
